@@ -42,10 +42,11 @@ function t(t,e,i,s){var o,n=arguments.length,r=n<3?e:null===s?s=Object.getOwnPro
       #root.slide-up *,
       #root.slide-left *,
       #root.slide-right * {
-        transition-property: transform;
+        transition-property: transform, opacity;
         transition-timing-function: ease-in-out;
         transition-duration: inherit;
         transform: translate(0, -110%);
+        opacity: 100%;
       }
       #root.slide-up * {
         transform: translate(0, 110%);

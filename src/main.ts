@@ -233,10 +233,11 @@ class StateSwitch extends LitElement {
       #root.slide-up *,
       #root.slide-left *,
       #root.slide-right * {
-        transition-property: transform;
+        transition-property: transform, opacity;
         transition-timing-function: ease-in-out;
         transition-duration: inherit;
         transform: translate(0, -110%);
+        opacity: 100%;
       }
       #root.slide-up * {
         transform: translate(0, 110%);
