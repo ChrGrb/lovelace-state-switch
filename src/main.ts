@@ -184,8 +184,8 @@ class StateSwitch extends LitElement {
         "
       >
         ${Object.keys(this.cards).map(
-          (k) => html` <div>${this.cards[k]}</div> `
-        )}
+      (k) => html` <div>${this.cards[k]}</div> `
+    )}
       </div>
     `;
   }
@@ -234,7 +234,7 @@ class StateSwitch extends LitElement {
       #root.slide-left *,
       #root.slide-right * {
         transition-property: transform;
-        transition-timing-function: linear;
+        transition-timing-function: ease-in-out;
         transition-duration: inherit;
         transform: translate(0, -110%);
       }
@@ -252,9 +252,11 @@ class StateSwitch extends LitElement {
       #root.slide-left .visible,
       #root.slide-right .visible {
         transform: translate(0%);
+        opacity: 100%;
       }
       #root.slide-down .out {
         transform: translate(0, 110%);
+        opacity: 0%;
       }
       #root.slide-up .out {
         transform: translate(0, -110%);
